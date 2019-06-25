@@ -16,12 +16,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@skypager/cli": "^1.1.5",
+    "@skypager/cli": "^1.2.0",
+    "@skypager/helpers-google-doc": "^1.2.1",
+    "@skypager/helpers-sheet": "^1.2.1",
     "@skypager/node": "^1.1.5"
   },
   "devDependencies": {
-    "@skypager/webpack": "^1.1.5",
     "@skypager/web": "^1.1.4",
+    "@skypager/webpack": "^1.1.5",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
