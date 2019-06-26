@@ -113,6 +113,22 @@ runtime.server("app", {
 });
 ```
 
+### API Endpoints
+
+In [server/endpoints](server/endpoints) you'll find two modules which expose REST Routes for working with your google sheets and document helpers.
+
+They expose the following API endpoints
+
+#### Sheets
+
+- List Sheets `GET /sheets`
+- Show Sheet `GET /sheets/:sheetName`
+
+#### Google Docs
+
+- List Documents `GET /google-docs`
+- Show Document `GET /google-docs/:docName`
+
 ## Automation Scripts
 
 Any file that you put in [the scripts folder](scripts) can be run with the following shell command
