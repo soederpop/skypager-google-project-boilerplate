@@ -10,8 +10,20 @@ exports.serveStatic = function serveStatic() {
 
 exports.cors = true
 
+exports.appWillMount = function appWillMount(app) {
+  const { runtime } = this
+
+
+  return app
+}
+
 exports.appDidMount = async function appDidMount(app) {
   const { runtime } = this
+
+  await Promise.all([
+    runtime.sheets && runtime.sheets.discover(),
+    runtime.googleDocs && runtime.googleDocs.discover()
+  ])
 
   if (runtime.isDevelopment) {
     setupDevelopment.call(this, app)

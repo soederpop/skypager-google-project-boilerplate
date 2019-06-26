@@ -1,4 +1,4 @@
-const runtime = require('@skypager/node')
+const runtime = require('../server/runtime').default 
 const { clear, print, randomBanner } = runtime.cli
 
 runtime.servers.register('app', () => require('../server'))
@@ -6,7 +6,15 @@ runtime.servers.register('app', () => require('../server'))
 async function main() {
   clear()
   randomBanner('Skypager')
-  print(`🚀 Starting Fullstack Application`)
+  print(`🚀 Starting Google Helpers Application`)
+
+  try {
+    await runtime.start()
+    console.log('started runtime')
+  } catch(error) {
+    console.error(error)
+    process.exit(1)
+  }
 
   const port = await runtime.networking.findOpenPort(
     parseInt(runtime.argv.port || process.env.PORT || 3000, 10)

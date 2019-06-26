@@ -5,8 +5,8 @@
   "author": "Jon Soeder <jon@chicago.com>",
   "homepage": "https://skypager.io",
   "scripts": {
-    "start": "cross-env NODE_ENV=production skypager serve --esm",
-    "dev": "cross-env NODE_ENV=development skypager serve --esm --hot",
+    "start": "cross-env NODE_ENV=production skypager serve --esm --pretty",
+    "dev": "cross-env NODE_ENV=development skypager serve --esm --hot --pretty",
     "build": "skypager build --app-only",
     "postbuild": "skypager hash-build",
     "watch": "skypager watch",
